@@ -176,6 +176,7 @@ def generate_documentation(playbook_string, output_format='json'):
     if internal_variables:
         json_documentation['internal_variables'] = internal_variables
 
+    # HANDLE OUTPUT
     if output_format == 'json':
         return json_documentation
     elif output_format == 'html':
