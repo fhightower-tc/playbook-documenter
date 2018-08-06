@@ -1,6 +1,6 @@
 # Playbook Documenter
 
-![Pipeline status](https://gitlab.com/fhightower-tc/playbook_documenter/badges/master/build.svg)
+![Pipeline status](https://gitlab.com/fhightower-tc/playbook-documenter/badges/master/build.svg)
 
 Library for creating documentation for any ThreatConnect playbook.
 
