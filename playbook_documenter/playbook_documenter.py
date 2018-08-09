@@ -139,7 +139,7 @@ def _generate_internal_variables(playbook_json):
 
 
 def generate_documentation(playbook_string, output_format='json'):
-    """Generate json documentation for the given playbook."""
+    """Generate json documentation for the given playbook. The possible output formats are 'json', 'html', and 'markdown'"""
     # INITIALIZATION
     json_documentation = dict()
 
