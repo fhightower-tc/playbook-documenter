@@ -53,7 +53,6 @@ lint: ## check style with flake8
 
 test: ## run tests quickly with the default Python
 	py.test
-	
 
 test-all: ## run tests on every Python version with tox
 	tox
@@ -96,3 +95,12 @@ init: ## install the development requirements with pip (related to python2.x)
 
 init3: ## install the development requirements with pip3 (related to python3.x)
 	pip3 install -r requirements_dev.txt
+
+uirun: ## run the flask app to show the UI
+	~/.virtualenvs/playbook_documenter_ui/bin/python playbook_documenter/ui.py
+
+uiclean: ## clean artifacts from running the UI
+	rm -rf venv && rm -rf *.egg-info && rm -rf dist && rm -rf *.log* && rm -fr .cache
+
+uivenv: ## create a virtualenv for the UI
+	virtualenv -p python3 ~/.virtualenvs/playbook_documenter_ui && . ~/.virtualenvs/playbook_documenter_ui/bin/activate && pip3 install -r requirements_UI.txt && pip3 install -r requirements.txt
