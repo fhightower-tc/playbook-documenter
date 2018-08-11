@@ -7,6 +7,7 @@ import re
 
 from .output import create_html_output, create_markdown_output
 
+
 def _find_value_of_parameter_by_name(parameter_list, name):
     for parameter in parameter_list:
         if parameter['appCatalogItemParameter']['paramName'] == name:

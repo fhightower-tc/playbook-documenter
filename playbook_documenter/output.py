@@ -3,12 +3,13 @@
 """Output the documentation in a certain format."""
 
 from jinja2 import Template
+import markdown
 
 
 def create_html_output(json_docs):
     """Create html output for the playbook by converting the docs to markdown and then converting to html."""
     markdown_docs = create_markdown_output(json_docs)
-    html_markdown = 1 # TODO: convert markdown to html
+    return markdown.markdown(markdown_docs)
 
 
 def create_markdown_output(json_docs):
