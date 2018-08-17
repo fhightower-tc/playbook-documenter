@@ -1,1 +1,1 @@
-web: gunicorn playbook_documenter_ui.playbook_documenter_ui:app --log-file=-
+web: gunicorn playbook_documenter.ui:app --log-file=-
