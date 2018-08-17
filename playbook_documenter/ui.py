@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from flask import flash, Flask, render_template, redirect, request, url_for
+from flask import flash, Flask, render_template, request
 
 import playbook_documenter
 
