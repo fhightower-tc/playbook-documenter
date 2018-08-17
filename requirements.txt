@@ -1,2 +1,4 @@
 markdown
 jinja2
+Flask
+gunicorn
