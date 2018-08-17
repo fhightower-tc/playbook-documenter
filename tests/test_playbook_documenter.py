@@ -7,7 +7,7 @@ import os
 
 import pytest
 
-from playbook_documenter import playbook_documenter
+import playbook_documenter
 
 
 def _read_file(file_name='add_tag_attribute.pbx'):

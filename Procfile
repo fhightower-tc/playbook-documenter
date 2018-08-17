@@ -1,1 +1,0 @@
-web: gunicorn playbook_documenter.ui:app --log-file=-

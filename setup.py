@@ -10,6 +10,8 @@ with open('LICENSE') as license_file:
     license = license_file.read()
 
 requirements = [
+    'markdown',
+    'jinja2'
     # TODO: put package requirements here
 ]
 
