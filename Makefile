@@ -103,4 +103,4 @@ uiclean: ## clean artifacts from running the UI
 	rm -rf venv && rm -rf *.egg-info && rm -rf dist && rm -rf *.log* && rm -fr .cache
 
 uivenv: ## create a virtualenv for the UI
-	virtualenv -p python3 ~/.virtualenvs/playbook_documenter_ui && . ~/.virtualenvs/playbook_documenter_ui/bin/activate && pip3 install -r requirements_UI.txt && pip3 install -r requirements.txt
+	virtualenv -p python3 ~/.virtualenvs/playbook_documenter_ui && . ~/.virtualenvs/playbook_documenter_ui/bin/activate && pip3 install -r requirements.txt

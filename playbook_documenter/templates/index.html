@@ -27,11 +27,14 @@
 <body class="light">
     <div class="top-bar blue">
         <div class="top-bar-left">
-            <b>Playbook Documenter UI</b> - 
+            <b>Playbook Documenter UI</b> - Create documentation for ThreatConnect playbooks/components
         </div>
     </div>
 
+    <br>
+
     <div class="row">
+        <p>Paste the contents of a ThreatConnect playbook or component below to view documentation for it:</p>
         {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
             {% for category, message in messages %}
@@ -48,7 +51,7 @@
         {% else %}
             <form action="{{ url_for('document_playbook') }}" method="post">
                 <!-- <input type="text" name="domain" placeholder="Enter a domain name..."> -->
-                <textarea name="playbook" placeholder="Enter a playbook"></textarea>
+                <textarea name="playbook" placeholder="Paste pb contents here..."></textarea>
                 <input type="submit" class="button blue">
             </form>
         {% endif %}

@@ -21,7 +21,7 @@ def document_playbook():
         markdown_docs = playbook_documenter.generate_documentation(request.form['playbook'], output_format='markdown')
         return render_template("index.html", html_docs=html_docs, markdown_docs=markdown_docs)
     else:
-        flash('Please paste the text for a playbook to create documentation for it.', 'error')
+        flash('Please paste the text for a playbook/component to create documentation for it.', 'error')
         return render_template("index.html")
 
 
