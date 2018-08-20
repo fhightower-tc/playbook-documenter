@@ -174,3 +174,11 @@ The following variables are declared in this playbook:
 
 - **errorMessagePrefix:** `[Indictor Comment Link Creator PB]:`
 - **shareCommentLink:** `[[#Trigger:1066:trg.action.type!String:#Trigger:1066:trg.action.item!String]]`"""
+
+
+def test_updated_datastore_docs():
+    """Make sure the updated datastore app is properly documented."""
+    pb_string = _read_file('updated_datastore_test.pbx')
+    docs = playbook_documenter.generate_documentation(pb_string, output_format='markdown')
+    print("docs {}".format(docs))
+    assert "Datastore" in docs

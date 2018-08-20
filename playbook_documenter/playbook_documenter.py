@@ -71,7 +71,7 @@ def _generate_datastore_docs(playbook_json):
     datastore_docs = list()
 
     for job in playbook_json['jobList']:
-        if job['appCatalogItem']['displayName'] == 'Data Store':
+        if job['appCatalogItem']['displayName'] in ['Data Store', 'DataStore']:
             new_datastore_docs = dict()
             new_datastore_docs['type_name'] = _find_value_of_parameter_by_name(job['jobParameterList'], 'type_name')
             new_datastore_docs['domain_type'] = _find_value_of_parameter_by_name(job['jobParameterList'], 'domain_type')
