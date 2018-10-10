@@ -3,6 +3,7 @@
 
 """Tests for `playbook_documenter` module."""
 
+import json
 import os
 
 import pytest
@@ -179,6 +180,14 @@ The following variables are declared in this playbook:
 def test_updated_datastore_docs():
     """Make sure the updated datastore app is properly documented."""
     pb_string = _read_file('updated_datastore_test.pbx')
+    docs = playbook_documenter.generate_documentation(pb_string, output_format='markdown')
+    print("docs {}".format(docs))
+    assert "Datastore" in docs
+
+
+def test_playbook_documenter_with_json():
+    """Make sure the app can handle situations in which it is given a dictionary."""
+    pb_string = json.loads(_read_file('updated_datastore_test.pbx'))
     docs = playbook_documenter.generate_documentation(pb_string, output_format='markdown')
     print("docs {}".format(docs))
     assert "Datastore" in docs

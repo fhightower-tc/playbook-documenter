@@ -146,6 +146,8 @@ def generate_documentation(playbook_string, output_format='json'):
 
     if not isinstance(playbook_string, dict):
         playbook_json = json.loads(playbook_string)
+    else:
+        playbook_json = playbook_string
 
     available_output_formats = ['json', 'html', 'markdown']
     if output_format not in available_output_formats:
