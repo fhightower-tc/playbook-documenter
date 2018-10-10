@@ -21,7 +21,7 @@ test_requirements = [
 
 setup(
     name='playbook_documenter',
-    version='0.1.1',
+    version='0.2.0',
     description="Library for creating documentation for any ThreatConnect playbook.",
     long_description=readme,
     author="Floyd Hightower",
